@@ -30,7 +30,7 @@ public class Graph : MonoBehaviour
         foreach (var point in _points)
         {
             var position = point.localPosition;
-            position.y = Mathf.Sin(Mathf.PI * (position.x + time));
+            position.y = FunctionLibrary.MultiWave(position.x, time);
             point.localPosition = position;
         }
     }
