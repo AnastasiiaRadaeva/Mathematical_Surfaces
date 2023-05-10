@@ -3,8 +3,10 @@
    <img src="https://img.shields.io/badge/Engine-Unity%202021.3.14f1-blue" alt="Unity Version">
 </p>
 
+❗**In progress**
+
 ## About
-This is the project by [Catlike Coding's tutorial](https://catlikecoding.com/unity/tutorials/basics/building-a-graph/).   
+This is the project by [Catlike Coding's tutorial](https://catlikecoding.com/unity/tutorials/basics/mathematical-surfaces/).   
 ## Documentation
 Colours in shaders depend on parameters:
 * Point Surface - R and B colour components depend on X and Y.
