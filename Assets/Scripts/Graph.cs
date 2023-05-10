@@ -4,6 +4,8 @@ public class Graph : MonoBehaviour
 {
     [SerializeField] private Transform pointPrefab;
     [SerializeField, Range(10, 100)] private int resolution = 10;
+    [SerializeField, Range(0, 2)] private int function;
+    
     private Transform[] _points;
 
     private void Awake()
@@ -30,7 +32,12 @@ public class Graph : MonoBehaviour
         foreach (var point in _points)
         {
             var position = point.localPosition;
-            position.y = FunctionLibrary.MultiWave(position.x, time);
+            position.y = function switch
+            {
+                0 => FunctionLibrary.Wave(position.x, time),
+                1 => FunctionLibrary.MultiWave(position.x, time),
+                _ => FunctionLibrary.Ripple(position.x, time)
+            };
             point.localPosition = position;
         }
     }

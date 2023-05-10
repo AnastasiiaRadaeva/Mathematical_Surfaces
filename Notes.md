@@ -3,3 +3,4 @@
   y += Sin(2f * PI * (x + t)) * (1f / 2f); // faster than Sin(2f * PI * (x + t)) / 2f
   return y * (2f / 3f); // faster than y / 1.5f;
     ```
+  
